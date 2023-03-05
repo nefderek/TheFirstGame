@@ -12,7 +12,8 @@
 
 	#canvas {
 	
-		background-color: #fff;
+		background-image: url(./13.png);
+		margin: 0;
 
 	}
 
