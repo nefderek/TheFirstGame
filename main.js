@@ -10,10 +10,10 @@
 	let image12 = new Image();
 	let image13 = new Image();
 
-	image.src = '1.gif';
+	image.src = '1_1.gif';
 	image2.src = '2.gif';
-	image10.src = '10.gif';
-	image11.src = '11.gif';
+	image10.src = '10v1.gif';
+	image11.src = '11v1.gif';
 	image12.src = '12.gif';
 	image13.src = '13.gif';
 
