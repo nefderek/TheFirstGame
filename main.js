@@ -1,5 +1,4 @@
-
-	const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("canvas");
 	const ctx = canvas.getContext("2d");
 	
 	
@@ -19,7 +18,6 @@
 
 	// основные данные
 	
-	
 	let x = 0;	// основное положение x,y
 	let y = 0;
 	let mx = 820;
@@ -31,16 +29,12 @@
 	let k = 0; // счетчик проходов.
 	
 	let speed = 1;
-
 	let speed2 = 1;
-	
 	let speedStar = 0.2;
 	let speedStar2 = 0.1;
 
 	let z = 0; // передает состояние движения
 
-	
-	
 	let arr1 = [890,700,200,450,650,650,250,10,450,900];
 	let arr2 = [35,50,150,330,220,320,234,320,15,250];
 
@@ -48,6 +42,7 @@
 	let star2 = [70,140,340,280,355,40,165,265,345,165,35,55,255,355,55,255,115,332,12,137,222,22,62,272,142,42,320,90,270,230,330,175];
 
 
+	
 
 	function end(){
 	
@@ -64,10 +59,7 @@
   	ctx.fillText(`press enter`,  430, 280);
 	}
 
-
-
-
-
+	
 // стопает персонажа об рамки
 
 	
@@ -88,7 +80,6 @@
 	||y - my1 >= -45 && y-my1 <= 45 && x-mx1 >= -45 && x-mx1 <= 45) {
 
 
-
 	x = 0;
 	y = 0;
 	
@@ -105,17 +96,14 @@
 	
 	
 	function render() {
-	ctx.clearRect(0,0, canvas.width, canvas.height);
+	// ctx.clearRect(0,0, canvas.width, canvas.height);
 	
 
 	if (z == 1) {
 	
 	y = y + speed;
-	stop();
-	 
-	
+	stop();	
 	}
-	
 	  if (z == 2) {
 	
 	   y = y - speed;
@@ -123,7 +111,6 @@
 
 	  }
 
-	
 	    if (z == 3) {
 	
 	    x = x - speed;
@@ -178,6 +165,10 @@
 
 	  }
 
+	ctx.clearRect(0,0, canvas.width, canvas.height);
+
+
+	
 	function OPS1(){
 	
 	my1 = Math.random()*1000;
@@ -185,12 +176,104 @@
 	my1 = Math.round(my1);
 	
 	
+	if (my1>500) {
+	my1 = 200;
+	
+	}
+	
 	}
 
-
+	function stars(){
+	ctx.fillStyle = "white";
+	
+	ctx.drawImage(image13, arr1[0],arr2[0]);
+	arr1[0] = arr1[0] - speedStar2; 
+	ctx.drawImage(image13, arr1[1],arr2[1]);
+	arr1[1] = arr1[1] - speedStar;
+	ctx.drawImage(image13, arr1[2],arr2[2]);
+	arr1[2] = arr1[2] - speedStar2;
+	ctx.drawImage(image13, arr1[3],arr2[3]);
+	arr1[3] = arr1[3] - speedStar;
+	ctx.drawImage(image13, arr1[4],arr2[4]);
+	arr1[4] = arr1[4] - speedStar2;
+	ctx.drawImage(image13, arr1[5],arr2[5]);
+	arr1[5] = arr1[5] - speedStar;
+	ctx.drawImage(image13, arr1[6],arr2[6]);
+	arr1[6] = arr1[6] - speedStar2;
+	ctx.drawImage(image13, arr1[7],arr2[7]);
+	arr1[7] = arr1[7] - speedStar;
+	ctx.drawImage(image13, arr1[8],arr2[8]);
+	arr1[8] = arr1[8] - speedStar;
+	
+	ctx.fillRect(star1[0], star2[0], 3, 3);
+	ctx.fillRect(star1[1], star2[1], 2, 2);
+	ctx.fillRect(star1[2], star2[2], 3, 3);
+	ctx.fillRect(star1[3], star2[3], 4, 4);
+	ctx.fillRect(star1[4], star2[4], 2, 2);
+	ctx.fillRect(star1[5], star2[5], 3, 3);
+	ctx.fillRect(star1[6], star2[6], 2, 2);
+	ctx.fillRect(star1[7], star2[7], 2, 2);
+	ctx.fillRect(star1[8], star2[8], 3, 3);
+	ctx.fillRect(star1[9], star2[9], 2, 2);
+	ctx.fillRect(star1[10], star2[10], 2, 2);
+	ctx.fillRect(star1[11], star2[11], 3, 3);
+	ctx.fillRect(star1[12], star2[12], 2, 2);
+	ctx.fillRect(star1[13], star2[13], 4, 4);
+	ctx.fillRect(star1[14], star2[14], 3, 3);
+	ctx.fillRect(star1[15], star2[15], 2, 2);
+	ctx.fillRect(star1[16], star2[16], 4, 4);
+	ctx.fillRect(star1[17], star2[17], 2, 2);
+	ctx.fillRect(star1[18], star2[18], 2, 2);
+	ctx.fillRect(star1[19], star2[19], 3, 3);
+	ctx.fillRect(star1[20], star2[20], 2, 2);
+	ctx.fillRect(star1[21], star2[21], 4, 4);
+	ctx.fillRect(star1[22], star2[22], 2, 2);
+	ctx.fillRect(star1[23], star2[23], 5, 5);
+	ctx.fillRect(star1[24], star2[24], 2, 2);	
+	ctx.fillRect(star1[25], star2[25], 2, 2);
+	ctx.fillRect(star1[26], star2[26], 2, 2);
+	ctx.fillRect(star1[27], star2[27], 2, 2);
+	ctx.fillRect(star1[28], star2[28], 2, 2);
+	ctx.fillRect(star1[29], star2[29], 4, 4);
+	ctx.fillRect(star1[30], star2[30], 2, 2);
+	ctx.fillRect(star1[31], star2[31], 2, 2);
+	
+	star1[0] = star1[0] - speedStar2;
+	star1[1] = star1[1] - speedStar2;
+	star1[2] = star1[2] - speedStar2;
+	star1[3] = star1[3] - speedStar2;
+	star1[4] = star1[4] - speedStar2;
+	star1[5] = star1[5] - speedStar2;
+	star1[6] = star1[6] - speedStar2;
+	star1[7] = star1[7] - speedStar2;
+	star1[8] = star1[8] - speedStar2;
+	star1[9] = star1[9] - speedStar2;
+	star1[10] = star1[10] - speedStar2;
+	star1[11] = star1[11] - speedStar2;
+	star1[12] = star1[12] - speedStar2;
+	star1[13] = star1[13] - speedStar2;
+	star1[14] = star1[14] - speedStar2;
+	star1[15] = star1[15] - speedStar2;
+	star1[16] = star1[16] - speedStar2;
+	star1[17] = star1[17] - speedStar2;
+	star1[18] = star1[18] - speedStar2;
+	star1[19] = star1[19] - speedStar2;
+	star1[20] = star1[20] - speedStar2;
+	star1[21] = star1[21] - speedStar2;
+	star1[22] = star1[22] - speedStar2;
+	star1[23] = star1[23] - speedStar2;
+	star1[24] = star1[24] - speedStar2;
+	star1[25] = star1[25] - speedStar2;
+	star1[26] = star1[26] - speedStar2;
+	star1[27] = star1[27] - speedStar2;
+	star1[28] = star1[28] - speedStar2;
+	star1[29] = star1[29] - speedStar2;
+	star1[30] = star1[30] - speedStar2;
+	star1[31] = star1[31] - speedStar2;
+	}
 	function OPS2(){
-	if (arr1[7] < -20){arr1[7] = 999 ; arr2[7] = 320;}
-	else if (arr1[0] < -20) { arr1[0] = 999; arr2 [0] = 35;}
+	
+	 if (arr1[0] < -20) { arr1[0] = 999; arr2 [0] = 35;}
 	else if (arr1[1] < -20) { arr1[1] = 999; arr2 [1] = 50;}
 	else if (arr1[2] < -20) { arr1[2] = 999; arr2 [2] = 150;}
 	else if (arr1[3] < -20) { arr1[3] = 999; arr2 [3] = 330;}
@@ -238,33 +321,43 @@
 
 	OPS2();
 
+	stars();
 
+		
 
 	function stop1 () {
 
 	if (mx < -1 || my < -1 || mx > 950 || my > 450
 	) {
 
-	
-
-
 	mx = 820;
 	my = 150;
-	mx1 = 720;
-	my1 = 200;
+	
 
 	OPS();
 
+	function stop2 (){
 	if (mx1 < -1 || my1 < -1 || mx1 > 950 || my1 > 450){
+
+	mx1 = 820;
+	my1 = 100;
+
+	if  (my1 < 450){
 	OPS1();
-	}
 	
+	}
+	}
 
+	}
 
+	stop2 ();
+	
 
 	}
 	
 	 }
+
+	
 
 	function drawText1() {
   	ctx.font = "35px serif";
@@ -277,8 +370,9 @@
 	ctx.fillStyle = 'white';
   	ctx.fillText(`Press: W \u2191 D \u2193 \u2190 A S \u2192 `,  550, 490);
 	}
-
-
+	
+	 ctx.drawImage(image12, 890,35);
+	ctx.drawImage(image, x, y);
 //
 	
 	
@@ -288,107 +382,10 @@
 	stop1 ();
 	
 	
-	ctx.drawImage(image12, 890,35);
-	ctx.drawImage(image, x, y);
-
-	function stars(){
-	ctx.fillStyle = "white";
 	
-	ctx.drawImage(image13, arr1[0],arr2[0]);
-	arr1[0] = arr1[0] - speedStar2; 
-	ctx.drawImage(image13, arr1[1],arr2[1]);
-	arr1[1] = arr1[1] - speedStar;
-	ctx.drawImage(image13, arr1[2],arr2[2]);
-	arr1[2] = arr1[2] - speedStar2;
-	ctx.drawImage(image13, arr1[3],arr2[3]);
-	arr1[3] = arr1[3] - speedStar;
-	ctx.drawImage(image13, arr1[4],arr2[4]);
-	arr1[4] = arr1[4] - speedStar2;
-	ctx.drawImage(image13, arr1[5],arr2[5]);
-	arr1[5] = arr1[5] - speedStar;
-	ctx.drawImage(image13, arr1[6],arr2[6]);
-	arr1[6] = arr1[6] - speedStar2;
-	ctx.drawImage(image13, arr1[7],arr2[7]);
-	arr1[7] = arr1[7] - speedStar;
-	ctx.drawImage(image13, arr1[8],arr2[8]);
-	arr1[8] = arr1[8] - speedStar;
-	
-	ctx.fillRect(star1[0], star2[0], 3, 3);
-	star1[0] = star1[0] - speedStar2;
-
-	ctx.fillRect(star1[1], star2[1], 2, 2);
-	star1[1] = star1[1] - speedStar2;
-
-	ctx.fillRect(star1[2], star2[2], 3, 3);
-	star1[2] = star1[2] - speedStar2;
-
-	ctx.fillRect(star1[3], star2[3], 4, 4);
-	star1[3] = star1[3] - speedStar2;
-
-
-	ctx.fillRect(star1[4], star2[4], 2, 2);
-	
-	
-	ctx.fillRect(star1[5], star2[5], 3, 3);
-	ctx.fillRect(star1[6], star2[6], 2, 2);
-	ctx.fillRect(star1[7], star2[7], 2, 2);
-	ctx.fillRect(star1[8], star2[8], 3, 3);
-	ctx.fillRect(star1[9], star2[9], 2, 2);
-	ctx.fillRect(star1[10], star2[10], 2, 2);
-	ctx.fillRect(star1[11], star2[11], 3, 3);
-	ctx.fillRect(star1[12], star2[12], 2, 2);
-	ctx.fillRect(star1[13], star2[13], 4, 4);
-	ctx.fillRect(star1[14], star2[14], 3, 3);
-	ctx.fillRect(star1[15], star2[15], 2, 2);
-	ctx.fillRect(star1[16], star2[16], 4, 4);
-	ctx.fillRect(star1[17], star2[17], 2, 2);
-	ctx.fillRect(star1[18], star2[18], 2, 2);
-	ctx.fillRect(star1[19], star2[19], 3, 3);
-	ctx.fillRect(star1[20], star2[20], 2, 2);
-	ctx.fillRect(star1[21], star2[21], 4, 4);
-	ctx.fillRect(star1[22], star2[22], 2, 2);
-	ctx.fillRect(star1[23], star2[23], 5, 5);
-	ctx.fillRect(star1[24], star2[24], 2, 2);	
-	ctx.fillRect(star1[25], star2[25], 2, 2);
-	ctx.fillRect(star1[26], star2[26], 2, 2);
-	ctx.fillRect(star1[27], star2[27], 2, 2);
-	ctx.fillRect(star1[28], star2[28], 2, 2);
-	ctx.fillRect(star1[29], star2[29], 4, 4);
-	ctx.fillRect(star1[30], star2[30], 2, 2);
-	ctx.fillRect(star1[31], star2[31], 2, 2);
-	
-	star1[4] = star1[4] - speedStar2;
-	star1[5] = star1[5] - speedStar2;
-	star1[6] = star1[6] - speedStar2;
-	star1[7] = star1[7] - speedStar2;
-	star1[8] = star1[8] - speedStar2;
-	star1[9] = star1[9] - speedStar2;
-	star1[10] = star1[10] - speedStar2;
-	star1[11] = star1[11] - speedStar2;
-	star1[12] = star1[12] - speedStar2;
-	star1[13] = star1[13] - speedStar2;
-	star1[14] = star1[14] - speedStar2;
-	star1[15] = star1[15] - speedStar2;
-	star1[16] = star1[16] - speedStar2;
-	star1[17] = star1[17] - speedStar2;
-	star1[18] = star1[18] - speedStar2;
-	star1[19] = star1[19] - speedStar2;
-	star1[20] = star1[20] - speedStar2;
-	star1[21] = star1[21] - speedStar2;
-	star1[22] = star1[22] - speedStar2;
-	star1[23] = star1[23] - speedStar2;
-	star1[24] = star1[24] - speedStar2;
-	star1[25] = star1[25] - speedStar2;
-	star1[26] = star1[26] - speedStar2;
-	star1[27] = star1[27] - speedStar2;
-	star1[28] = star1[28] - speedStar2;
-	star1[29] = star1[29] - speedStar2;
-	star1[30] = star1[30] - speedStar2;
-	star1[31] = star1[31] - speedStar2;
-	}
 
 		
-	stars();
+	
 	
 	function im(){
 
@@ -401,6 +398,7 @@
 	
 	function im2(){
 	
+	
 	ctx.drawImage(image11, mx1,my1);
 	
 	mx1 = mx1 - speed2;
@@ -410,9 +408,11 @@
 	im();
 	
 
-	if (k > 5){
+	if (k > 2){
 	im2();
+
 	}
+	
 	window.requestAnimationFrame(render);
 	}
 
@@ -421,4 +421,4 @@
 
 	
 	ctx.strokeRect(0, 0, 1000, 500);
-	
+
