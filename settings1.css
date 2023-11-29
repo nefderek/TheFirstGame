@@ -1,0 +1,35 @@
+
+
+.menu1 {
+    padding-top: 40px;
+    padding-left: 40px;
+    font-size: 50px;
+    height: 500px;
+    width: 1000px;
+    color: #fff;
+    /*background-color: #243a52;*/
+    text-align: left;
+    background: url(about.jpg);
+}
+
+.galaxy {
+    color:cyan;
+}
+.system {
+/*    padding-top: 100px;*/
+}
+
+.about {
+    text-align: center;
+    text-decoration: none;
+    padding-top: 0px;
+    padding-right: 50px;
+}
+.play1 {
+    color: #fff;
+     text-decoration: none;
+}
+.about1 {
+    color: #fff;
+    text-decoration: none;
+}

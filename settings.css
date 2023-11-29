@@ -1,0 +1,42 @@
+
+
+.menu {
+    padding-top: 40px;
+    font-size: 50px;
+    height: 500px;
+    width: 1000px;
+    color: #fff;
+    /*background-color: #243a52;*/
+    text-align: center;
+    background: url(game__2.jpg);
+}
+
+menu1 {
+    padding-top: 40px;
+    font-size: 50px;
+    height: 500px;
+    width: 1000px;
+    color: #fff;
+    /*background-color: #243a52;*/
+    text-align: center;
+    background: url(about___.jpg);
+}
+.galaxy {
+    color:cyan;
+}
+.system {
+    padding-top: 100px;
+}
+
+.about {
+    text-decoration: none;
+    padding-top: 10px;
+}
+.play1 {
+    color: #fff;
+     text-decoration: none;
+}
+.about1 {
+    color: #fff;
+    text-decoration: none;
+}
