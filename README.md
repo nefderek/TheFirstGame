@@ -1,35 +1,23 @@
-<html>
-
-<head>
-
-<style>
-	body {
-
-	margin: 0;
-	background-color: rgb(228,228,228);
-
-	}
-
-	#canvas {
-	
-		background-image: url(./13.png);
-		margin: 0;
-
-	}
-
-</style>
-
-</head>
-<body>
-
-
-<canvas id="canvas" width="1000" height="500"> </canvas>
-
-
-<script src="main.js"></script>
-
-		
-
-</body>
-
-</html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Menu Game</title>
+        <link rel="stylesheet" href="settings.css">
+    </head>
+    <body>
+       
+       <div class='menu'>
+           <div class='galaxy'>
+               Galaxy wars
+           </div>
+           <div class='system'>
+                <div class='play'>
+                   <a class='play1' href="https://nefderek.github.io/TheFirstGame/"> Play! </a>
+                </div>
+               <div class='about'>
+                   <a class='about1' href='about.html'>About game </a>
+               </div>
+           </div>
+        </div>
+    </body>
+    </html>
