@@ -12,7 +12,7 @@
            </div>
            <div class='system'>
                 <div class='play'>
-                   <a class='play1' href="https://nefderek.github.io/TheFirstGame/"> Play! </a>
+                   <a class='play1' href="main.html"> Play! </a>
                 </div>
                <div class='about'>
                    <a class='about1' href='about.html'>About game </a>
